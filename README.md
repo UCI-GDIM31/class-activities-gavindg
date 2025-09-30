@@ -1,7 +1,10 @@
 # in-class-activities
 ## Devlogs
 ### W1
-Hello world!
+When you move the Camera off of the Cat GameObject (re-parent it to another object or the scene root), moving the player will no longer move the Camera along with it.
+This is because the parent-child relationship affects the transform (position, rotation, and scale) of an object.
+Parent objects add the values in their transform to their child objects, making them "follow" the parent. 
+Without the parent-child relationship, the Camera will not have its transform updated by the cat, leading to the disjointed behavior that is observed.
 
 ### W2
 Create future Devlog sub-headers with the three # symbols, then write your Devlogs below them.
