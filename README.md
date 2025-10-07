@@ -7,7 +7,9 @@ Parent objects add the values in their transform to their child objects, making 
 Without the parent-child relationship, the Camera will not have its transform updated by the cat, leading to the disjointed behavior that is observed.
 
 ### W2
-Create future Devlog sub-headers with the three # symbols, then write your Devlogs below them.
+1. The r, g, and b, values are floats because the **float** data type represents a real-valued number (aka a number that can contian a decimal point followed by a fractional component). This works best for our rgb values because they can range from 0.0 to 1.0. If we used an integer, we would only be able to use 1 or 0, which wouldn't give us much control over our colors. A boolean data type doesn't make much sense here, as a boolean can only be "true" or "false," which doesn't make much sense in the context of a real-valued number. Finally, the string data type contains text, which similarly does not convert to a decimal number.
+2. The _bounce variable is an int, because integers represent whole numbers. You cannot have a fraction of a bounce; e.g. 0.2 bounces doesn't make much sense. For the same reasons as #1, a boolean's true/false values don't convert to numbers well (at least not in C#). A string's text can contain numbers in them, but they cannot actually be used for arithmetic operations like an integer or float can.
+3. The lesson in Step 4 is that all lines of code need to end in a semicolon, even if the expression is otherwise correct!
 
 ## Open-Source Assets
 ### W1
