@@ -11,6 +11,18 @@ Without the parent-child relationship, the Camera will not have its transform up
 2. The _bounce variable is an int, because integers represent whole numbers. You cannot have a fraction of a bounce; e.g. 0.2 bounces doesn't make much sense. For the same reasons as #1, a boolean's true/false values don't convert to numbers well (at least not in C#). A string's text can contain numbers in them, but they cannot actually be used for arithmetic operations like an integer or float can.
 3. The lesson in Step 4 is that all lines of code need to end in a semicolon, even if the expression is otherwise correct!
 
+### W3
+
+(I was sitting at table 12)
+
+```
+string GetResponse(int friendshipLevel, boolean playerKnowsSecret);
+```
+Since we want a text response, the function should return a string. The information that the function relies on is the player's friendship level and whether they know the character's secret. I think an integer fits the friendshipLevel parameter, as I'm assuming that it's based on discrete choices given that this is a visual novel. As for whether the player knows the secret or not, I chose the boolean type beacause that can only be true or false.
+
+1. A good metaphor for the relationship between classes and components is that classes & components are like thinking of something in my mind versus having the real thing. To illustrate the metaphor, take a pair of glasses as an example. I can't attach "the idea of a pair of glasses" (class) to my player, but I can attach an actual pair. Both the pair in my mind and in my hand have attributes (member variables) such as their tint, color, prescription strength, etc; and they both have things they can do (methods) such as effect my vision every frame or break OnCollisionEntered3D, but they'll only affect my vision when I'm actually wearing them. 
+2. The balls get extremely bright when they bounce too many times can be seen by inspecting the OnCollisionEnter2D method on BallW3.cs. in this method, the rigidbody's linear velocity is multiplied by the speed multiplier set in the inspector (for me, 1.2f), and then its ballRenderer's color variable is multiplied based on its speed. Since the OnCollisionEnter callback is called every time the ball collides with something (aka bounces), it will speed up and then increase the magnitude of its brightness on each bounce.
+
 ## Open-Source Assets
 ### W1
 - Animals: https://assetstore.unity.com/packages/3d/characters/animals/animals-free-animated-low-poly-3d-models-260727 
