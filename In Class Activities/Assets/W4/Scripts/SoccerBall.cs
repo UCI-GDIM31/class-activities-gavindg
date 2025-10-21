@@ -69,8 +69,9 @@ public class SoccerBall : MonoBehaviour
 
         // STEP 4 -------------------------------------------------------------
 
-        // for steps 5 & 5
+        // for steps 5 & 6
         ++_numGoals;
+        _pointsText.text = "points: " + _numGoals;
         _timeSinceLastGoal = 0f;
         
         _goalVFX.Play();
