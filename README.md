@@ -18,10 +18,15 @@ Without the parent-child relationship, the Camera will not have its transform up
 ```
 string GetResponse(int friendshipLevel, boolean playerKnowsSecret);
 ```
-Since we want a text response, the function should return a string. The information that the function relies on is the player's friendship level and whether they know the character's secret. I think an integer fits the friendshipLevel parameter, as I'm assuming that it's based on discrete choices given that this is a visual novel. As for whether the player knows the secret or not, I chose the boolean type beacause that can only be true or false.
+Since we want a text response, the function should return a string. The information that the function relies on is the player's friendship level and whether they know the character's secret. I think an integer fits the friendshipLevel parameter, as I'm assuming that it's based on discrete choices given that this is a visual novel. As for whether the player knows the secret or not, I chose the boolean type because that can only be true or false.
 
 1. A good metaphor for the relationship between classes and components is that classes & components are like thinking of something in my mind versus having the real thing. To illustrate the metaphor, take a pair of glasses as an example. I can't attach "the idea of a pair of glasses" (class) to my player, but I can attach an actual pair. Both the pair in my mind and in my hand have attributes (member variables) such as their tint, color, prescription strength, etc; and they both have things they can do (methods) such as effect my vision every frame or break OnCollisionEntered3D, but they'll only affect my vision when I'm actually wearing them. 
 2. The balls get extremely bright when they bounce too many times can be seen by inspecting the OnCollisionEnter2D method on BallW3.cs. in this method, the rigidbody's linear velocity is multiplied by the speed multiplier set in the inspector (for me, 1.2f), and then its ballRenderer's color variable is multiplied based on its speed. Since the OnCollisionEnter callback is called every time the ball collides with something (aka bounces), it will speed up and then increase the magnitude of its brightness on each bounce.
+
+### W4
+17: this line defines a boolean member variable `_isGrounded` in class CatW4 and sets its value to true. CatW4 is a Component.
+28: The Input.GetKeyDown method is called with the parameter KeyCode.Space, returning true if the space key is held; false otherwise. The result of this expression is and'd with the `_isGrounded` variable.
+32: sets the `_isGrounded` variable to false after applying a force to the GameObject's RigidBody component to make it jump.
 
 ## Open-Source Assets
 ### W1
