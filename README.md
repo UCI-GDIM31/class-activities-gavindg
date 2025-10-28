@@ -28,6 +28,22 @@ Since we want a text response, the function should return a string. The informat
 28: The Input.GetKeyDown method is called with the parameter KeyCode.Space, returning true if the space key is held; false otherwise. The result of this expression is and'd with the `_isGrounded` variable.
 32: sets the `_isGrounded` variable to false after applying a force to the GameObject's RigidBody component to make it jump.
 
+### W5
+
+#### Activity 1: Collaborative Learning
+My question was, what is the difference between using the public keyword and [SerializeFeild] for making variables accessible in the editor? 
+
+The answer that I got is that the public keyword makes a variable accessible by other scripts, which may not be what you want. With [SerializeFeild], the variable is still private but can be changed in editor!
+
+#### Activity 2: Pair Programming
+Plan for creating the DeerW5.cs class:
+1. add a [SerializeFeild] private Transform `_target` member variable
+2. attach DeerW5.cs as a component to the Deer GameObject
+3. in Start(), use GetComponent<NavMeshAgent>() to get the navmesh on the object
+4. set the NavMeshAgent's destination using SetDestination(_target)
+depending on your whether your _target moves, you may want to call SetDestination occasionally in Update()!
+In my case, I am targetting the red mushroom, which does not move and as such can be set only once.
+
 ## Open-Source Assets
 ### W1
 - Animals: https://assetstore.unity.com/packages/3d/characters/animals/animals-free-animated-low-poly-3d-models-260727 
