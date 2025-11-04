@@ -44,6 +44,19 @@ Plan for creating the DeerW5.cs class:
 depending on your whether your _target moves, you may want to call SetDestination occasionally in Update()!
 In my case, I am targetting the red mushroom, which does not move and as such can be set only once.
 
+### W6
+#### Activity 1: Class resource guide
+My team did not really assign teams, instead we collectively went through all of the class resources and collaboratively added to the doc where each topic/concept was found. Here is the finished document: [link](https://docs.google.com/document/d/1I9v9DLgH_h1Npt-SvcE6Rrcdn8rclMwmf5H-zmU4f14/edit?tab=t.0)
+#### Activity 2: Pair Programming
+Plan for creating the BatW6 class:
+1. First, I viewed the videos of the completed bats to verify what behavior we want the bats to have.
+2. I need to write a script that extends MonoBehaviour to add it to a GameObject as a Component.
+3. The class needs a member variable `_speed`, which is tunable in the inspector. It also needs a reference to the player's position. I'm not sure how the bats are spawned yet, but assuming they are statically created (e.g. in the Unity editor and not thru scripting), I could probably just have a private serialized `_player` GameObject variable.
+4. The class needs a public function to enable/disable the bat, used by BatManager. This can be done in one method which takes a boolean parameter, which I will call `SetBatChasing()`.
+5. The class will need a Start() method during testing, but will actually not need one in the final version.
+6. The class will need an Update() method to make the bat move towards the player every frame. It will need to use Time.deltaTime to move towards the player independant of the user's FPS
+7. The class will need an OnTriggerEnter callback defined to display the cheeky message when the bat collides with the player. This means we will also need some member variables to hold the text that will be displayed to the user, which will probably be serialized private string variables.
+
 ## Open-Source Assets
 ### W1
 - Animals: https://assetstore.unity.com/packages/3d/characters/animals/animals-free-animated-low-poly-3d-models-260727 
