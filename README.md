@@ -61,7 +61,7 @@ Plan for creating the BatW6 class:
 #### Activity 1: Designing a Game Engineering Plan
 I sat at table 16 and worked on the Animation section of our game design document. [Here is a link to our google doc that we worked on!](https://docs.google.com/document/d/15Bf9iq4hlaq_e307D2wAsGnGOj82cBwZpf1YgvIXKqo/edit?tab=t.0)
 #### Activity 2: Visualizing Coordinate Spaces
-The issue with the code in Step 2 is that the forward vector used to move the player is in world space. This can be fixed by using transform.forward instead, which is in local space to the muskrat.
+The issue with the code in Step 2 is that the forward vector used to move the player is in world space. This can be fixed by using transform.Translate to move the object, which will automatically convert the displacement given to local space. Alternatively, this can be fixed by using transform.forward instead of Vector3.forward in the original expression. transform.forward will be relative to the muskrat's transform, so this also works.
 
 ## Open-Source Assets
 ### W1
