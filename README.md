@@ -57,6 +57,12 @@ Plan for creating the BatW6 class:
 6. The class will need an Update() method to make the bat move towards the player every frame. It will need to use Time.deltaTime to move towards the player independant of the user's FPS
 7. The class will need an OnTriggerEnter callback defined to display the cheeky message when the bat collides with the player. This means we will also need some member variables to hold the text that will be displayed to the user, which will probably be serialized private string variables.
 
+### W7
+#### Activity 1: Designing a Game Engineering Plan
+I sat at table 16 and worked on the Animation section of our game design document. [Here is a link to our google doc that we worked on!](https://docs.google.com/document/d/15Bf9iq4hlaq_e307D2wAsGnGOj82cBwZpf1YgvIXKqo/edit?tab=t.0)
+#### Activity 2: Visualizing Coordinate Spaces
+The issue with the code in Step 2 is that the forward vector used to move the player is in world space. This can be fixed by using transform.forward instead, which is in local space to the muskrat.
+
 ## Open-Source Assets
 ### W1
 - Animals: https://assetstore.unity.com/packages/3d/characters/animals/animals-free-animated-low-poly-3d-models-260727 
